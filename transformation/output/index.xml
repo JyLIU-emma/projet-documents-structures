@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/index.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<presentation>
+    <partie id="1">
+        <titre>Présentation du projet</titre>
+        <para>Ce projet est réalisé dans le cadre du cours "Document structuré" assuré par M. Arthur Provenier.</para>
+        <para>Dans ce projet, nous essayons de construire une e-book sous forme d'application web à partir des fichiers odt, en utilisant les connaissances autour de XML : TEI, schéma RelaxNG, XSLT, et Xquery dans le logiciel eXist-db. Voici la démarche du projet:</para>
+        <para>- dézipper les fichiers odt avec cette ligne de commande <code>unzip nomFichier.odt -d nomRepertoire</code>;</para>
+        <para>- En utilisant une feuille de style XSLT, récupérer les métadonnées et le texte fournis dans "meta.xml" et "content.xml" et les transformer en un autre fichier xml qui conforme au encadrement TEI;</para>
+        <para>- En utilisant eXist-db, créer une application, dans laquelle nous créons des pages web afin d'organiser et illustrer le contenu de ces fichiers TEI d'une manière lisible par humain. Les données affichées dans les pages web sont toutes stockées dans le répertoire "data". EXist-db extrait et crée automatiquement les pages selon les templates définis par nous dans les fichiers xslt et Xquery.</para>
+        <para>Attention: j'ai réorganisé un peu le répertoire de l'app en mettant toutes les pages html dans le sous-répertoire "page", et les fichier XSL dans le sous-répertoire "ressources"</para>
+    </partie>
+    <partie id="2">
+        <titre>Navigation sur le site</titre>
+        <para>La page d'acceuil (celle-ci) présente le déroulement du projet, les contenus sur le site et les difficultés rencontrées pendant le travail.</para>
+        <para>La barre en haut existe dans toutes les pages, qui nous permet de naviger sur ce site. "Ebook App" et "Home" dirigent tous vers la page d'acceuil. </para>
+        <para>En cliquant sur le bouton "Bibliothèque", nous pouvons choisir entre deux pages : "bibliothèque.html" et "search.html". La première affiche la liste des livres dans notre base de données. Nous pouvons cliquer dessus, qui nous dirige vers une page cachée "show.html".</para>
+        <para>Sur cette page, le contenu du document est affiché en respectant sa structure initiale dans fichier odt : deux niveaux de titres, caractères en gras/ en italique et annotation des citations (alignement à droite). Avant le texte de chaque livre, une table des matières est fournie, qui nous permet d'aller directement à la partie qui nous intéresse.</para>
+        <para>Finalement, la page de recherche ("search.html") permet à l'utilisateur de réaliser deux genres de recherche : 1) trouver le document selon le titre/auteur/date de publication fournis par l'utilisateur. Ensuite, il peut effectuer une recherche de plein texte dans ces documents trouvés. Le résultat est montré sous forme d'un concordancier.</para>
+    </partie>
+    <partie id="3">
+        <titre>Difficultés rencontrées</titre>
+        <para>Pendant l'étape de transformation, deux grosse difficultés me fait passer beaucoup de temps.</para>
+        <para>Premièrement, puisque l'encadrement tei est hyper-compliqué, j'ai dû fouiller dans son site et me référer à des exemples pour former une bonne arborescence.</para>
+        <para>Deuxièmement, le fichier "content.xml" du fichier odt n'encadre que les chaînes de caractères pour noter sa forme d'affichage, autrement-dit qu'il n'y a pas d'enchâssement pour les sous-titres. Néanmoins, ce n'est pas le cas pour le fichier tei. Comment choisir les noeuds entre deux titres du même niveau me paraît compliqué. J'ai finalement trouvé un moyen pour réaliser ce changement mais je le trouve un peu complexe. J'imagine qu'on a une méthode plus simple pour réaliser cette tâche.</para>
+        <para>Ensuite, j'ai rencontré même plus de problèmes pendant l'utilisation d'eXist-db.</para>
+        <para>D'un côté, ces difficultés viennent du fait que je n'avais pas appris beaucoup de chose sur ce logiciel avant de commencer le projet. Par conséquent, j'ai aucune idée sur l'étape à suivre pour réaliser cette tâche. J'ai passé quelques jours pour lire la documentation. Mais elle me paraît trop détaillée et un peu compliquée (sans exemple d'un projet simple), et je n'ai toujours pas une vue générale de son organisation. Finalement, en suivant un tutoriel (<lien>https://howto.acdh.oeaw.ac.at/blog/books/how-to-build-a-digital-edition-web-app/</lien>) recommandé par un camarade, j'ai pu commencer le travail.</para>
+        <para>De l'autre côté, mes connaissances sur html/css/js sont très limites. En plus, je ne connais pas bien la logique de eXist-db. De ce fait, jusqu'ici, je ne sais pas encore comment intégrer un joli template de site dans ce logiciel. J'ai dû vérifier et chercher sur Internet, et même tester plusieurs fois pour chaque modification. En un mot, je fait difficilement et trop lentement des progrès.</para>
+    </partie>
+</presentation>
