@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meta xmlns="http://exist-db.org/xquery/repo">
+    <description>Ebook App</description>
+    <author/>
+    <website/>
+    <status>alpha</status>
+    <license>GNU-LGPL</license>
+    <copyright>true</copyright>
+    <type>application</type>
+    <target>ebook</target>
+    <prepare>pre-install.xql</prepare>
+    <finish/>
+<deployed>2021-01-08T03:11:52.002+01:00</deployed>
+</meta>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    <div align="center">
+        <h1>Page de recherche</h1>
+    </div>
+    <form action="">
+        <div class="input-group">
+            <label for="queryMeta">Entrez l'info meta (case-insensitive) : </label>
+            <input name="queryMeta"/>
+            <input type="radio" id="title" name="infotype" value="titre"/>
+            <label for="infotype">Titre </label>
+            <input type="radio" id="author" name="infotype" value="auteur"/>
+            <label for="infotype">auteur </label>
+            <input type="radio" id="none" name="infotype" value="no-info" checked="checked"/>
+            <label for="infotype">Aucune id¨¦e</label>
+            <br/>
+            <label for="date">Date de publicataion(dd/mm/yyyy) : </label>
+            <input name="date" pattern="^\D*(\d{2})\D*(\d{2})\D*(\d{4})\D*$"/>
+            <input type="radio" id="before" name="date-comp" value="avant" checked="checked"/>
+            <label for="date-comp">Avant </label>
+            <input type="radio" id="after" name="date-comp" value="apres"/>
+            <label for="date-comp">Apr¨¨s </label>
+            <input type="radio" id="no-date-info" name="date-comp" value="no-info"/>
+            <label for="date-comp">Aucune id¨¦e sur la date de publication</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Go!</button>
+    </form>
+    <div data-template="search:meta"/>
+    <hr/>
+    <h3>Document trouv¨¦ : </h3>
+    <div data-template="search:res"/>
+    
+    <div>
+        <form action="">
+            <label for="queryWord">Mot cl¨¦ (case-insensitive) : </label>
+            <input name="queryWord" type="text"/>
+
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+    
+<!--    <div data-template="search:pleintexte" />-->
+    
+<!--        <div>
+            <form method="get" class="form-inline" id="pageform">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" name="searchexpr"/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Go!</button>
+                </div>
+            </form>
+        </div>-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Avant</th>
+                    <th>Mot cl¨¦</th>
+                    <th>Apr¨¨s</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-template="search:pleintexte"/>
+            </tbody>
+        </table>
+    
+</div>

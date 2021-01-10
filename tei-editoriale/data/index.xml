@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentation>
+    <partie id="1">
+        <titre>Pr¨¦sentation du projet</titre>
+        <para>Ce projet est r¨¦alis¨¦ dans le cadre du cours "Document structur¨¦" assur¨¦ par M. Arthur Provenier.</para>
+        <para>Dans ce projet, nous essayons de construire une e-book sous forme d'application web ¨¤ partir des fichiers odt, en utilisant les connaissances autour de XML : TEI, sch¨¦ma RelaxNG, XSLT, et Xquery dans le logiciel eXist-db. Voici la d¨¦marche du projet:</para>
+        <para>- d¨¦zipper les fichiers odt avec cette ligne de commande <code>unzip nomFichier.odt -d nomRepertoire</code>;</para>
+        <para>- En utilisant une feuille de style XSLT, r¨¦cup¨¦rer les m¨¦tadonn¨¦es et le texte fournis dans "meta.xml" et "content.xml" et les transformer en un autre fichier xml qui conforme au encadrement TEI;</para>
+        <para>- En utilisant eXist-db, cr¨¦er une application, dans laquelle nous cr¨¦ons des pages web afin d'organiser et illustrer le contenu de ces fichiers TEI d'une mani¨¨re lisible par humain. Les donn¨¦es affich¨¦es dans les pages web sont toutes stock¨¦es dans le r¨¦pertoire "data". EXist-db extrait et cr¨¦e automatiquement les pages selon les templates d¨¦finis par nous dans les fichiers xslt et Xquery.</para>
+        <para>Attention: j'ai r¨¦organis¨¦ un peu le r¨¦pertoire de l'app en mettant toutes les pages html dans le sous-r¨¦pertoire "page", et les fichier XSL dans le sous-r¨¦pertoire "ressources"</para>
+    </partie>
+    <partie id="2">
+        <titre>Navigation sur le site</titre>
+        <para>La page d'acceuil (celle-ci) pr¨¦sente le d¨¦roulement du projet, les contenus sur le site et les difficult¨¦s rencontr¨¦es pendant le travail.</para>
+        <para>La barre en haut existe dans toutes les pages, qui nous permet de naviger sur ce site. "Ebook App" et "Home" dirigent tous vers la page d'acceuil. </para>
+        <para>En cliquant sur le bouton "Biblioth¨¨que", nous pouvons choisir entre deux pages : "biblioth¨¨que.html" et "search.html". La premi¨¨re affiche la liste des livres dans notre base de donn¨¦es. Nous pouvons cliquer dessus, qui nous dirige vers une page cach¨¦e "show.html".</para>
+        <para>Sur cette page, le contenu du document est affich¨¦ en respectant sa structure initiale dans fichier odt : deux niveaux de titres, caract¨¨res en gras/ en italique et annotation des citations (alignement ¨¤ droite). Avant le texte de chaque livre, une table des mati¨¨res est fournie, qui nous permet d'aller directement ¨¤ la partie qui nous int¨¦resse.</para>
+        <para>Finalement, la page de recherche ("search.html") permet ¨¤ l'utilisateur de r¨¦aliser deux genres de recherche : 1) trouver le document selon le titre/auteur/date de publication fournis par l'utilisateur. Ensuite, il peut effectuer une recherche de plein texte dans ces documents trouv¨¦s. Le r¨¦sultat est montr¨¦ sous forme d'un concordancier.</para>
+    </partie>
+    <partie id="3">
+        <titre>Difficult¨¦s rencontr¨¦es</titre>
+        <para>Pendant l'¨¦tape de transformation, deux grosse difficult¨¦s me fait passer beaucoup de temps.</para>
+        <para>Premi¨¨rement, puisque l'encadrement tei est hyper-compliqu¨¦, j'ai d? fouiller dans son site et me r¨¦f¨¦rer ¨¤ des exemples pour former une bonne arborescence.</para>
+        <para>Deuxi¨¨mement, le fichier "content.xml" du fichier odt n'encadre que les cha?nes de caract¨¨res pour noter sa forme d'affichage, autrement-dit qu'il n'y a pas d'ench?ssement pour les sous-titres. N¨¦anmoins, ce n'est pas le cas pour le fichier tei. Comment choisir les noeuds entre deux titres du m¨ºme niveau me para?t compliqu¨¦. J'ai finalement trouv¨¦ un moyen pour r¨¦aliser ce changement mais je le trouve un peu complexe. J'imagine qu'on a une m¨¦thode plus simple pour r¨¦aliser cette t?che.</para>
+        <para>Ensuite, j'ai rencontr¨¦ m¨ºme plus de probl¨¨mes pendant l'utilisation d'eXist-db.</para>
+        <para>D'un c?t¨¦, ces difficult¨¦s viennent du fait que je n'avais pas appris beaucoup de chose sur ce logiciel avant de commencer le projet. Par cons¨¦quent, j'ai aucune id¨¦e sur l'¨¦tape ¨¤ suivre pour r¨¦aliser cette t?che. J'ai pass¨¦ quelques jours pour lire la documentation. Mais elle me para?t trop d¨¦taill¨¦e et un peu compliqu¨¦e (sans exemple d'un projet simple), et je n'ai toujours pas une vue g¨¦n¨¦rale de son organisation. Finalement, en suivant un tutoriel (<lien>https://howto.acdh.oeaw.ac.at/blog/books/how-to-build-a-digital-edition-web-app/</lien>) recommand¨¦ par un camarade, j'ai pu commencer le travail.</para>
+        <para>De l'autre c?t¨¦, mes connaissances sur html/css/js sont tr¨¨s limites. En plus, je ne connais pas bien la logique de eXist-db. De ce fait, jusqu'ici, je ne sais pas encore comment int¨¦grer un joli template de site dans ce logiciel. J'ai d? v¨¦rifier et chercher sur Internet, et m¨ºme tester plusieurs fois pour chaque modification. En un mot, je fait difficilement et trop lentement des progr¨¨s.</para>
+    </partie>
+</presentation>
