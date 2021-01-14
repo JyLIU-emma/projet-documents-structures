@@ -15,7 +15,8 @@
         <para>La barre en haut existe dans toutes les pages, qui nous permet de naviger sur ce site. "Ebook App" et "Home" dirigent tous vers la page d'acceuil. </para>
         <para>En cliquant sur le bouton "Biblioth¨¨que", nous pouvons choisir entre deux pages : "biblioth¨¨que.html" et "search.html". La premi¨¨re affiche la liste des livres dans notre base de donn¨¦es. Nous pouvons cliquer dessus, qui nous dirige vers une page cach¨¦e "show.html".</para>
         <para>Sur cette page, le contenu du document est affich¨¦ en respectant sa structure initiale dans fichier odt : deux niveaux de titres, caract¨¨res en gras/ en italique et annotation des citations (alignement ¨¤ droite). Avant le texte de chaque livre, une table des mati¨¨res est fournie, qui nous permet d'aller directement ¨¤ la partie qui nous int¨¦resse.</para>
-        <para>Finalement, la page de recherche ("search.html") permet ¨¤ l'utilisateur de r¨¦aliser deux genres de recherche : 1) trouver le document selon le titre/auteur/date de publication fournis par l'utilisateur. Ensuite, il peut effectuer une recherche de plein texte dans ces documents trouv¨¦s. Le r¨¦sultat est montr¨¦ sous forme d'un concordancier.</para>
+        <para>Finalement, la page de recherche ("search.html") permet ¨¤ l'utilisateur de r¨¦aliser deux genres de recherche : 1) trouver le document selon le titre/auteur/date de publication fournis par l'utilisateur.</para>
+        <para>Ensuite, il peut encore limiter le domaine de recherche en supprimant les titres du fichier, et puis effectuer une recherche de plein texte dans le reste. Le r¨¦sultat est montr¨¦ sous forme d'un concordancier, avec le nombre de trouv¨¦es en haut.</para>
     </partie>
     <partie id="3">
         <titre>Difficult¨¦s rencontr¨¦es</titre>
@@ -25,5 +26,6 @@
         <para>Ensuite, j'ai rencontr¨¦ m¨ºme plus de probl¨¨mes pendant l'utilisation d'eXist-db.</para>
         <para>D'un c?t¨¦, ces difficult¨¦s viennent du fait que je n'avais pas appris beaucoup de chose sur ce logiciel avant de commencer le projet. Par cons¨¦quent, j'ai aucune id¨¦e sur l'¨¦tape ¨¤ suivre pour r¨¦aliser cette t?che. J'ai pass¨¦ quelques jours pour lire la documentation. Mais elle me para?t trop d¨¦taill¨¦e et un peu compliqu¨¦e (sans exemple d'un projet simple), et je n'ai toujours pas une vue g¨¦n¨¦rale de son organisation. Finalement, en suivant un tutoriel (<lien>https://howto.acdh.oeaw.ac.at/blog/books/how-to-build-a-digital-edition-web-app/</lien>) recommand¨¦ par un camarade, j'ai pu commencer le travail.</para>
         <para>De l'autre c?t¨¦, mes connaissances sur html/css/js sont tr¨¨s limites. En plus, je ne connais pas bien la logique de eXist-db. De ce fait, jusqu'ici, je ne sais pas encore comment int¨¦grer un joli template de site dans ce logiciel. J'ai d? v¨¦rifier et chercher sur Internet, et m¨ºme tester plusieurs fois pour chaque modification. En un mot, je fait difficilement et trop lentement des progr¨¨s.</para>
+        <para>Quant aux probl¨¨mes concrets dans cette partie, j'ai pass¨¦ beaucoup de temps pour trouver et donner le bon chemin pour chaque fonction. En plus, la transmission des infos donn¨¦es d'une fonction ¨¤ l'autre m'a pris ¨¦galement pas mal de temps. Heureusement, j'ai finalement avoir des solutions.</para>
     </partie>
 </presentation>

@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
+    
+<!--    js pour compter les matchs-->
+    <script>
+        $( document ).ready(function() {
+        var hits = ($('tr').length - 1);
+        if (hits == 1){
+        $("#hitcount").text(hits+" Hit");
+        }
+        else {
+        $("#hitcount").text(hits+" Hits");
+        }
+        });     
+    </script>
+
+<!--form pour donner des metadonnees des fichiers-->
     <div align="center">
         <h1>Page de recherche</h1>
     </div>
-    <form action="">
+    <form action="" method="post">
         <div class="input-group">
             <label for="queryMeta">Entrez l'info meta (case-insensitive) : </label>
             <input name="queryMeta"/>
@@ -25,43 +40,44 @@
         </div>
         <button type="submit" class="btn btn-primary">Go!</button>
     </form>
+
+<!--    partie pour montrer le resultat de la premiere recherche-->
     <div data-template="search:meta"/>
-    <hr/>
     <h3>Document trouv¨¦ : </h3>
     <div data-template="search:res"/>
+    <hr/>
     
+<!--    partie de form pour donner le mot ¨¤ chercher-->
     <div>
-        <form action="">
-            <label for="queryWord">Mot cl¨¦ (case-insensitive) : </label>
+        <form>
+            <label for="queryFile">Choisissez le/les documents ¨¤ fouiller : </label>
+            <div data-template="search:liste"/>
+            <br/>
+            <label for="queryWord">Mot clef (case-insensitive) : </label>
             <input name="queryWord" type="text"/>
-
+            
             <button type="submit" class="btn btn-primary">Search</button>
         </form>
+        <hr/>  
     </div>
     
-<!--    <div data-template="search:pleintexte" />-->
-    
-<!--        <div>
-            <form method="get" class="form-inline" id="pageform">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="searchexpr"/>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Go!</button>
-                </div>
-            </form>
-        </div>-->
+<!--    partie pour montrer le r¨¦sultat de recherche-->
+    <div>
+        <h2>
+            <span id="hitcount"/> pour <b data-template="search:word"/>
+        </h2>  
         <table>
             <thead>
                 <tr>
                     <th>Avant</th>
-                    <th>Mot cl¨¦</th>
+                    <th width="80">Mot cl¨¦</th>
                     <th>Apr¨¨s</th>
                 </tr>
             </thead>
             <tbody>
-                <tr data-template="search:pleintexte"/>
+                <tr data-template="search:pleintexte"/>  
             </tbody>
         </table>
+    </div>
     
 </div>
