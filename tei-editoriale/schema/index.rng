@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="presentation">
+            <oneOrMore>
+                <ref name="partie" />
+            </oneOrMore>
+        </element>
+    </start>
+    <define name="partie">
+        <element name="partie">
+            <attribute name="id" />
+            <element name="titre">
+                <text/>
+            </element>
+            <ref name="texte"/>
+        </element>
+    </define>
+    <define name="texte">
+        <oneOrMore>
+            <element name="para">
+                <optional>
+                    <text/>
+                </optional>
+                <zeroOrMore>
+                    <choice>
+                        <element name="code"><text/></element>
+                        <element name="lien"><text/></element>
+                    </choice>
+                </zeroOrMore>
+                <optional>
+                    <text/>
+                </optional>
+            </element>
+        </oneOrMore>
+    </define>
+</grammar>

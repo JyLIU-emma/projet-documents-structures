@@ -27,30 +27,30 @@
             <input type="radio" id="author" name="infotype" value="auteur"/>
             <label for="infotype">auteur </label>
             <input type="radio" id="none" name="infotype" value="no-info" checked="checked"/>
-            <label for="infotype">Aucune id®¶e</label>
+            <label for="infotype">Aucune id√©e</label>
             <br/>
             <label for="date">Date de publicataion(dd/mm/yyyy) : </label>
             <input name="date" pattern="^\D*(\d{2})\D*(\d{2})\D*(\d{4})\D*$"/>
             <input type="radio" id="before" name="date-comp" value="avant" checked="checked"/>
             <label for="date-comp">Avant </label>
             <input type="radio" id="after" name="date-comp" value="apres"/>
-            <label for="date-comp">Apr®®s </label>
+            <label for="date-comp">Apr√®s </label>
             <input type="radio" id="no-date-info" name="date-comp" value="no-info"/>
-            <label for="date-comp">Aucune id®¶e sur la date de publication</label>
+            <label for="date-comp">Aucune id√©e sur la date de publication</label>
         </div>
         <button type="submit" class="btn btn-primary">Go!</button>
     </form>
 
 <!--    partie pour montrer le resultat de la premiere recherche-->
     <div data-template="search:meta"/>
-    <h3>Document trouv®¶ : </h3>
+    <h3>Document trouv√© : </h3>
     <div data-template="search:res"/>
     <hr/>
     
-<!--    partie de form pour donner le mot ®§ chercher-->
+<!--    partie de form pour donner le mot √† chercher-->
     <div>
         <form>
-            <label for="queryFile">Choisissez le/les documents ®§ fouiller : </label>
+            <label for="queryFile">Choisissez le/les documents √† fouiller : </label>
             <div data-template="search:liste"/>
             <br/>
             <label for="queryWord">Mot clef (case-insensitive) : </label>
@@ -61,7 +61,7 @@
         <hr/>  
     </div>
     
-<!--    partie pour montrer le r®¶sultat de recherche-->
+<!--    partie pour montrer le r√©sultat de recherche-->
     <div>
         <h2>
             <span id="hitcount"/> pour <b data-template="search:word"/>
@@ -70,8 +70,8 @@
             <thead>
                 <tr>
                     <th>Avant</th>
-                    <th width="80">Mot cl®¶</th>
-                    <th>Apr®®s</th>
+                    <th width="80">Mot cl√©</th>
+                    <th>Apr√®s</th>
                 </tr>
             </thead>
             <tbody>

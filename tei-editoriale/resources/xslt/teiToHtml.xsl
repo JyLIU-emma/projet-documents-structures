@@ -13,7 +13,7 @@
             <br/>
         </div>
         <div class="sommaire">
-            <h2>Table des mati¨¨res</h2>
+            <h2>Table des matiÃ¨res</h2>
             <xsl:for-each select="//tei:body/tei:div">
                 <xsl:call-template name="sommaire"/>
             </xsl:for-each>
