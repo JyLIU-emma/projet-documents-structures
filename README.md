@@ -10,7 +10,7 @@ Cette web application explique la démarche de ce projet, met en forme les fichi
 ## Illustration de l'app final
 
 ### Page d'acceuil
-<img src="imgs_pre/index.jpg" alt="index page" width="900" height="600" />
+<img src="imgs_pre/index.jpg" alt="index page" width="70%" height="45%" />
 
 ### Affichage du texte
 <img src="imgs_pre/mise_en_forme.jpg" alt="mise en forme" width="900" height="450" />
