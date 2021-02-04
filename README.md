@@ -10,7 +10,20 @@ Cette web application explique la démarche de ce projet, met en forme les fichi
 ## Illustration de l'app final
 
 ### Page d'acceuil
-<img src="imgs_pre/index.jpg" alt="index page" width="50" height="50" />
+<img src="imgs_pre/index.jpg" alt="index page" width="900" height="600" />
+
+### Affichage du texte
+<img src="imgs_pre/mise_en_forme.jpg" alt="mise en forme" width="900" height="450" />
+
+### Page de recherche
+
+**recherche selon métadonnées**
+
+<img src="imgs_pre/search1.jpg" alt="search1" width="900" height="600" />
+
+**recherche selon métadonnées**
+
+<img src="imgs_pre/search2.jpg" alt="serach2" width="900" height="600" />
 
 ## Info sur les fichiers
 L'application zippé est `ebook-0.1.xar` , la version dézippée est `tei-editoriale`, dans laquelle, les pages html sont stockées sous `pages`, les fichiers xslt pour transformer les fichiers xml sont dans `resources/xslt`
