@@ -10,9 +10,9 @@ Cette web application explique la démarche de ce projet, met en forme les fichi
 ## Illustration de l'app final
 
 ### Page d'acceuil
-```html
+`
 <img src="imgs_pre/index.jpg" alt="index page" width="50" height="50" />
-```
+`
 
 ## Info sur les fichiers
 L'application zippé est `ebook-0.1.xar` , la version dézippée est `tei-editoriale`, dans laquelle, les pages html sont stockées sous `pages`, les fichiers xslt pour transformer les fichiers xml sont dans `resources/xslt`
